@@ -104,22 +104,8 @@ p {
   top: 0;
   z-index: 999;
   font-family: "Kalnia", sans-serif;
-  animation: grow .1s linear;
-  transition: ease;
-}
 
-@keyframes grow {
-  from {
-  max-width: 1300px;
-  width: 100%;
-  margin: 0 auto;
-  } to {
-    height: 80px;
-    width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  }
+  transition: .8s ease;
 }
 
 .navbar-container {
@@ -127,19 +113,8 @@ p {
   justify-content: center;
   align-items: center;
   height: 80px;
-  max-width: 1500px;
-  animation: navcontgrow .1s linear;  
-  transition: ease;
-}
-
-@keyframes navcontgrow {
-  from {
-    width: 1200px;
-    height: 60px;
-  } to {
-    height: 80px;
-    width: 1500px;
-  }
+  max-width: 1500px; 
+  transition: .8s ease;
 }
 
 .navbar-logo {
