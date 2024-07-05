@@ -782,19 +782,18 @@ textarea {
 
   .email-form-container {
     flex-direction: column;
-    margin-top: 50px;
+    margin-top: 0;
     margin-bottom: 0;
   }
 
   .form {
     width: 100%;
-    margin-top: 25px;
+    margin-top: 50px;
   }
   
   .contact-msg {
     width: 100%;
     margin-top: -30px;
-    padding: 0 10px;
   }
 
   .qrCode  {
