@@ -4,7 +4,7 @@ import Menu from "../Pages/Menu";
 import Contact from "../Pages/Contact";
 import { useInView } from "react-intersection-observer";
 import styles from "../global.module.scss"
-import HeroSerction from "./HeroSerction";
+import HeroSection from "./HeroSection";
 
 const Main = () => {
   const {ref, inView} = useInView({
@@ -19,7 +19,7 @@ const Main = () => {
   return (  
     <div>  
       <div id="top">
-      <HeroSerction />
+      <HeroSection />
       </div>
       <div className="sections">
         <div className="about-break">

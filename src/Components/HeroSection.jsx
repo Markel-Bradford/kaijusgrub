@@ -2,7 +2,7 @@ import React from "react";
 import { useInView } from "react-intersection-observer";
 import styles from "../global.module.scss"
 
-const HeroSerction = () => {
+const HeroSection = () => {
   const {ref, inView} = useInView({
     triggerOnce: true,
     threshold: .1
@@ -27,4 +27,4 @@ const HeroSerction = () => {
   );
 };
 
-export default HeroSerction;
+export default HeroSection;

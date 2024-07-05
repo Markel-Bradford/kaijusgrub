@@ -104,6 +104,22 @@ p {
   top: 0;
   z-index: 999;
   font-family: "Kalnia", sans-serif;
+  animation: grow .1s linear;
+  transition: ease;
+}
+
+@keyframes grow {
+  from {
+  max-width: 1300px;
+  width: 100%;
+  margin: 0 auto;
+  } to {
+    height: 80px;
+    width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
 }
 
 .navbar-container {
@@ -112,6 +128,18 @@ p {
   align-items: center;
   height: 80px;
   max-width: 1500px;
+  animation: navcontgrow .1s linear;  
+  transition: ease;
+}
+
+@keyframes navcontgrow {
+  from {
+    width: 1200px;
+    height: 60px;
+  } to {
+    height: 80px;
+    width: 1500px;
+  }
 }
 
 .navbar-logo {
@@ -176,6 +204,44 @@ p {
 
 .menu-icon {
   display: none;
+}
+
+/* Shrink Styles */
+.navbar-shrink {
+  max-width: 1300px;
+  width: 100%;
+  margin: 0 auto;
+  animation: shrink .2s linear forwards;
+  
+}
+
+@keyframes shrink {
+  from {
+    height: 80px;
+  max-width: 1500px;
+  width: 100%;
+  } to {
+    height: 60px;
+  max-width: 1300px;
+  width: 100%;
+  }
+}
+.navbar-shrink .navbar-container {
+  animation: navcontshrink .2s linear forwards;
+}
+
+@keyframes navcontshrink {
+  from {
+    width: 1500px;
+    height: 80px;
+  } to {
+    width: 1200px;
+    height: 60px;
+  }
+}
+
+.navbar-shrink .nav-links {
+  padding: 0.5rem 0.8rem;
 }
 
 @media screen and (max-width: 1024px) {
