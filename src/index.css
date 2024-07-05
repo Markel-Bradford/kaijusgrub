@@ -306,6 +306,18 @@ p {
     color: #242424;
     transition: 250ms;
   }
+
+  .navbar-shrink {
+    animation: none;
+  }
+
+  .navbar-shrink .navbar-container {
+    animation: none;
+  }
+
+  .navbar-shrink .nav-item {
+    height: 80px;
+  }
 }
 
 /*Hero Style*/
