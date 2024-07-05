@@ -11,13 +11,17 @@ const Main = () => {
     triggerOnce: true,
     threshold: .1
   });
-  
-  return (    
-  <div className="sections">
-    <div id="top">
+  const {ref: fillerImg, inView: fillerInView} = useInView({
+    triggerOnce: true,
+    threshold: .1
+  });
+
+  return (  
+    <div>  
+      <div id="top">
       <HeroSerction />
       </div>
-
+      <div className="sections">
         <div className="about-break">
           <About />
         </div>
@@ -27,13 +31,14 @@ const Main = () => {
         <div className="menu-break">
           <Menu />
         </div>
-        <div className="filler">
-        <img src="/kaijusgrub/images/eattreat.jpeg" alt="" id="treat" />
+        <div className="filler" ref={fillerImg}>
+        <img src="/kaijusgrub/images/eattreat.jpeg" alt="" id="treat" className={fillerInView ? styles.imgFade : styles.hidden}/>
         </div>
         <div className="contact-break">
           <Contact />
         </div>
       </div>
+    </div>
   );
 };
 

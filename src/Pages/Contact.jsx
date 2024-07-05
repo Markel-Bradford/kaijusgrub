@@ -1,7 +1,23 @@
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
+import { useInView } from "react-intersection-observer";
+import styles from "../global.module.scss"
 
 const Contact = () => {
+  const {ref, inView} = useInView({
+    triggerOnce: true,
+    threshold: .1
+  });
+  const {ref: info, inView: infoInView} = useInView({
+    triggerOnce: true,
+    threshold: .1
+  });
+  const {ref: icons, inView: iconsInView} = useInView({
+    triggerOnce: true,
+    threshold: .1
+  });
+  
+  
   const form = useRef();
 
   //define where emails will be sent using emailjs
@@ -25,10 +41,10 @@ const Contact = () => {
   return (
     <div id="contact">
       <div className="filler2"></div>
-      <h1>Contact Us</h1>
+      <h1 ref={ref} className={`${inView ? styles.fadeIn : styles.hidden}`}>Contact Us</h1>
       <div className="email-form-container">
-        <div className="contact-msg">
-          <p className="contact-info">
+        <div className="contact-msg" ref={info}>
+          <p className={`${styles.contactInfo} ${infoInView ? styles.fadeRight : styles.hidden}`}>
             If you would like to request a quote or learn more about our
             products, please complete the email contact form. You can also send
             us a message and drop us a follow on instagram at{" "}
@@ -40,7 +56,7 @@ const Contact = () => {
             </a>
             .
           </p>
-          <div className="icons">
+          <div ref={icons} className={`${styles.icons} ${ iconsInView ? styles.fadeIn : styles.hidden}`}>
             <img
               src="/kaijusgrub/images/QR.jpg"
               alt="IG QR code"
