@@ -1,0 +1,70 @@
+.fadeRight {
+  animation: fadeRight .7s linear;
+  transition: 1s;
+  -webkit-animation: fadeRight .7s linear;
+  perspective: 1000;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  -webkit-backface-visibility: hidden;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+@keyframes fadeRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-1.5rem);
+    -webkit-transform: translateX(-1.5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+  }
+}
+
+.fadeIn {
+    animation: fadeIn .7s linear;
+    -webkit-animation: fadeIn .7s linear;
+    transition: 1s;
+    perspective: 1000;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  -webkit-backface-visibility: hidden;
+}
+
+@keyframes fadeIn {
+   0% {opacity: 0;
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+}
+    to {
+        opacity: 1;
+        transform: scale(1);
+    -webkit-transform: scale(1);
+    }
+}
+
+.imgFade {
+    animation: imgFade 1s linear;
+    -webkit-animation: imgFade 1s linear;
+    transition: 1s;
+    perspective: 1000;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  -webkit-backface-visibility: hidden;
+}
+
+@keyframes imgFade {
+    0% {opacity: 0;
+     transform: translateY(20%);
+     -webkit-transform: translateY(20%);
+ }
+     to {
+         opacity: 1;
+         transform: translateY(0);
+     -webkit-transform: translateY(0);
+     }
+ }
