@@ -11,7 +11,7 @@ function Carditems(props) {
   
   return (
     <>
-        <li ref={ref} className={`${styles.cardsItem} ${inView ? styles.fadeIn : styles.hidden}`}>
+        <li ref={ref} className={`${styles.cardsItem} ${inView ? styles.fadeIn : styles.hidden}`} onClick={() => props.onClick(props.product)}>
             <Link className='cardsItemLink' to={props.path}>
             <figure className='cardItemPicWrap' data-category={props.label}>
             <img src={props.src} alt='Menu photos' className='cardItemImg' />
