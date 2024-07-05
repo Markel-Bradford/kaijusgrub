@@ -657,11 +657,11 @@ video {
   left: 50%;
   transform: translate(-50%, -50%);
   background: #fff2e1;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
   z-index: 1000;
   border-radius: 16px;
-  animation: slideup 0.8s linear;
-  -webkit-animation: slideup 0.8s linear;
+  animation: slideup 0.3s linear;
+  -webkit-animation: slideup 0.3s linear;
   perspective: 1000;
   -webkit-perspective: 1000;
   transition: 1s;
@@ -720,8 +720,8 @@ video {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
     z-index: 1000;
     border-radius: 16px;
-    animation: slideupmobile 0.8s linear;
-    -webkit-animation: slideupmobile 0.8s linear;
+    animation: slideupmobile 0.3s linear;
+    -webkit-animation: slideupmobile 0.3s linear;
     perspective: 1000;
     -webkit-perspective: 1000;
     transition: 1s;
