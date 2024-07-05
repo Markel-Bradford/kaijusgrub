@@ -665,6 +665,8 @@ video {
   perspective: 1000;
   -webkit-perspective: 1000;
   transition: 1s;
+  max-height: 80%;
+  overflow-y: scroll;
 }
 
 @keyframes slideup {
@@ -700,9 +702,9 @@ video {
 }
 
 .close-btn {
-  position: absolute;
-  top: 5px;
-  right: 10px;
+  position: sticky;
+  top: 10px;
+  left: 95%;
   cursor: pointer;
   font-size: 20px;
   font-weight: 900;
@@ -738,6 +740,11 @@ video {
     to {
       top: 55%;
     }
+  }
+
+  .close-btn {
+    top: 10px;
+    left: 320px;
   }
 }
 
